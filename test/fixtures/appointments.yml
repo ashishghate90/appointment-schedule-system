@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  schedule_at: 2020-02-09 13:54:36
+  patient_id: 1
+  doctor_id: 1
+
+two:
+  title: MyString
+  description: MyString
+  schedule_at: 2020-02-09 13:54:36
+  patient_id: 1
+  doctor_id: 1

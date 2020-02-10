@@ -1,0 +1,28 @@
+<h1>Doctors Appointments</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Schedule at</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @appointments.each_with_index do |appointment, i| %>
+      <tr>
+        <th scope="row"><%= i+1 %></th>
+        <td><%= appointment.title %></td>
+        <td><%= appointment.description %></td>
+        <td><%= appointment.schedule_at %></td>
+        <td><%= appointment.status ? "Accepted" : "Not Accepted"%></td>
+        <% is_accepted = appointment.status ? "Reject" : "Accept"%>
+        <td><%= link_to "#{is_accepted}", doctor_appoinments_path(id: appointment), method: :post %></td>
+        <td><%= link_to 'Show', appointment %></td>
+      </tr>
+     <% end %>
+  </tbody>
+</table>
+<br>
